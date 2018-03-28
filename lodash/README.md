@@ -1,0 +1,1 @@
+Answers for the lodash tasks, I'll put them in an app.js
