@@ -142,12 +142,21 @@ console.log(ageAscend[0])
 
 // 15
 
+// var gillFamily = [{name: 'john', age: 20}, {name: 'richard', age: 27}, 
+// {name: 'debbie', age: 55}, {name: 'dan', age: 25}, {name: 'robin', age: 60}]
+
+// var containsA = _.forEach(gillFamily, [function(o) { return o.name.includes == ('a') }])
+
+// console.log('If name contains letter A')
+// console.log(containsA)
+
+// 16
+
+
 var gillFamily = [{name: 'john', age: 20}, {name: 'richard', age: 27}, 
 {name: 'debbie', age: 55}, {name: 'dan', age: 25}, {name: 'robin', age: 60}]
 
-var containsA = _.forEach(gillFamily, [function(o) { return o.name.includes('a') }])
 
-console.log('If name contains letter A')
-console.log(containsA)
+var capital = _.upperFirst(gillFamily, name)
 
-
+console.log(capital) //I'm lost, i've tried multiple things and this feels like it should just work, 
