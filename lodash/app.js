@@ -98,7 +98,23 @@ console.log(_.toString(fullNameArrayU50 ))
 
 // 9
 
+var HTMLtable = document.getElementById('table')
+
+console.log(HTMLtable)
+
 // 10
+
+var gillFamily = [{name: 'john', age: 20}, {name: 'richard', age: 27}, 
+{name: 'debbie', age: 55}, {name: 'dan', age: 25}, {name: 'robin', age: 60}]
+
+var age20OrUnder = _.reject(gillFamily, function(o){return o.age > 20 == true})
+
+var over20 = _.forEach(gillFamily, function(o){o.age > 21 ? o.age = '' : o.age = o.age});
+console.log('Dropping ages above 20')
+
+console.log(over20)
+
+
 
 // 11
 
@@ -142,13 +158,14 @@ console.log(ageAscend[0])
 
 // 15
 
-// var gillFamily = [{name: 'john', age: 20}, {name: 'richard', age: 27}, 
-// {name: 'debbie', age: 55}, {name: 'dan', age: 25}, {name: 'robin', age: 60}]
+var gillFamily = [{name: 'john', age: 20}, {name: 'richard', age: 27}, 
+{name: 'debbie', age: 55}, {name: 'dan', age: 25}, {name: 'robin', age: 60}]
 
-// var containsA = _.forEach(gillFamily, [function(o) { return o.name.includes == ('a') }])
+var containsA = _.filter(gillFamily, function(o) {return o.name.includes('a') == true})
 
-// console.log('If name contains letter A')
-// console.log(containsA)
+console.log('Q15: Return family members with "a" in name')
+
+console.log(containsA)
 
 // 16
 
@@ -157,6 +174,22 @@ var gillFamily = [{name: 'john', age: 20}, {name: 'richard', age: 27},
 {name: 'debbie', age: 55}, {name: 'dan', age: 25}, {name: 'robin', age: 60}]
 
 
-var capital = _.upperFirst(gillFamily, name)
+var names = _.map(gillFamily, 'name')
 
-console.log(capital) //I'm lost, i've tried multiple things and this feels like it should just work, 
+var capital = _.upperFirst(gillFamily.name)
+console.log('Q16: Capitalise everybodys the first letter of everyones names')
+
+console.log(capital)
+
+// 17
+
+var gillFamily = [{name: 'john', age: 20}, {name: 'richard', age: 27}, 
+{name: 'debbie', age: 55}, {name: 'dan', age: 25}, {name: 'robin', age: 60}]
+
+var containsA = _.filter(gillFamily, function(o) {return o.name.includes('a') == true})
+
+var youngestWithA = (_.sortBy(containsA, [function(o) { return o.age; }]))
+
+console.log('Q17: Find the youngest member of the Gill family with an "a" in their name.')
+
+console.log(youngestWithA[0])
