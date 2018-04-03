@@ -96,7 +96,58 @@ var fullNameArrayU50 = _.map(fullNameU50, 'name')
 
 console.log(_.toString(fullNameArrayU50 ))
 
+// 9
 
+// 10
 
+// 11
+
+var gillFamily = [{name: 'john', age: 20}, {name: 'richard', age: 27}, 
+{name: 'debbie', age: 55}, {name: 'dan', age: 25}, {name: 'robin', age: 60}]
+
+var gillFamilyAgeAscend = _.sortBy(gillFamily, [function(o) { return o.age; }])
+
+console.log('Q11: Gill family sorted by age, youngest to eldest')
+
+console.log(gillFamilyAgeAscend)
+ 
+// 12
+
+var gillFamily = [{name: 'john', age: 20}, {name: 'richard', age: 27}, 
+{name: 'debbie', age: 55}, {name: 'dan', age: 25}, {name: 'robin', age: 60}]
+
+var beginWithD = _.filter(gillFamily, function(o) {return o.name.charAt(0) == 'd'})
+
+console.log("Q12: Return objects with names beginning with d")
+
+console.log(beginWithD) 
+
+//  13
+
+var gillFamily = [{name: 'john', age: 20}, {name: 'richard', age: 27}, 
+{name: 'debbie', age: 55}, {name: 'dan', age: 25}, {name: 'robin', age: 60}]
+
+console.log('Q13: Names sorted by their first letter')
+console.log(_.sortBy(gillFamily, [function(o) { return o.name; }]))
+
+// 14
+
+var gillFamily = [{name: 'john', age: 20}, {name: 'richard', age: 27}, 
+{name: 'debbie', age: 55}, {name: 'dan', age: 25}, {name: 'robin', age: 60}]
+
+console.log('Q14: Youngest gill')
+var ageAscend = (_.sortBy(gillFamily, [function(o) { return o.age; }]))
+
+console.log(ageAscend[0])
+
+// 15
+
+var gillFamily = [{name: 'john', age: 20}, {name: 'richard', age: 27}, 
+{name: 'debbie', age: 55}, {name: 'dan', age: 25}, {name: 'robin', age: 60}]
+
+var containsA = _.forEach(gillFamily, [function(o) { return o.name.includes('a') }])
+
+console.log('If name contains letter A')
+console.log(containsA)
 
 
